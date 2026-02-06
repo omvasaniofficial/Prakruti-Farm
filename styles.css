@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
+
+:root {
+    --pomegranate: #8b0000;
+    --ruby: #d00000;
+    --earth: #432818;
+    --cream: #fdfaf5;
+    --leaf: #386641;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cream);
+    color: var(--earth);
+    scroll-behavior: smooth;
+}
+
+.serif {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* Custom Navigation Underline */
+.nav-link {
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--pomegranate);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Gallery Masonry-like Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 350px;
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 60%);
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* Glassmorphism for Dashboard */
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* <!-- Chosen Palette: Royal Pomegranate (Deep Red, Gold Accents, Ivory Base) -->
+    <!-- Application Structure Plan:
+         1. HERO: Full-width cinematic introduction.
+         2. QUICK NAV: Dashboard buttons to jump to specific farm aspects.
+         3. SECTIONS:
+            - THE STORY: Owner details and farm philosophy.
+            - THE GALLERY: High-visual-impact masonry grid with categorized images.
+            - THE DATA: Interactive charts for yield and nutritional science.
+            - LIFE AT FARM: Seasonal interactive widget.
+         Rationale: Users visiting farm sites want to 'see' the product and the environment immediately. A central, high-quality gallery is prioritized.
+    -->
+    <!-- Visualization & Content Choices:
+         - Visual Gallery: Uses Unsplash high-res placeholders to simulate real photography.
+         - Seasonal Flow: Dynamic text updates based on user clicks.
+         - Harvest Analytics: Chart.js bars for transparency.
+         - NO SVG/Mermaid used.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. --> */

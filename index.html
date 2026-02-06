@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crimson Valley Pomegranates | Premium Farm Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 transition-all duration-300 glass border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-[#8b0000] rounded-full flex items-center justify-center text-white font-bold">
+                    <a href="index.html">NP</a>
+                </div>
+                <h1 class="text-2xl font-bold serif tracking-tight"><a href="index.html">Prakriti Farm</a></h1>
+            </div>
+            <nav class="flex items-center justify-between p-6">
+
+            <div class="lg:hidden">
+                <button id="menu-btn" class="text-stone-600 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Desktop Menu: Only appears on Large screens (lg:flex) -->
+            <div class="hidden lg:flex items-center space-x-10 text-sm font-semibold uppercase tracking-widest text-stone-600">
+                <a href="index.html" class="hover:text-[#8b0000]">Home</a>
+                <a href="#story" class="hover:text-[#8b0000]">The Story</a>
+                <a href="#gallery" class="hover:text-[#8b0000]">Gallery</a>
+                <a href="#harvest" class="hover:text-[#8b0000]">Harvest</a>
+                <a href="#visit" class="px-5 py-2 bg-[#8b0000] text-white rounded-full">Book a Visit</a>
+            </div>
+
+            <!-- Mobile Menu: Dropdown for small and tablet screens -->
+            <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white flex-col items-center space-y-6 py-8 shadow-xl lg:hidden z-50 text-stone-600 font-semibold uppercase tracking-widest">
+                <a href="index.html" class="hover:text-[#8b0000]">Home</a>
+                <a href="#story" class="mobile-link hover:text-[#8b0000]">The Story</a>
+                <a href="#gallery" class="mobile-link hover:text-[#8b0000]">Gallery</a>
+                <a href="#harvest" class="mobile-link hover:text-[#8b0000]">Harvest</a>
+                <a href="#visit" class="mobile-link px-8 py-3 bg-[#8b0000] text-white rounded-full">Book a Visit</a>
+            </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center text-center px-6 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="1.jpg" class="w-full h-full object-cover" alt="Pomegranate Orchard">
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl fade-in mt-24">
+            <span class="text-white uppercase tracking-[0.4em] text-sm mb-4 block">Harvesting Excellence Since
+                1985</span>
+            <h2 class="text-6xl md:text-8xl text-white serif italic mb-8">Pomegranates of Distinction</h2>
+            <p class="text-xl text-stone-200 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                Nestled in the sun-drenched farm, we produce the world's most vibrant organic pomegranates through
+                regenerative soil mastery.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-4">
+                <a href="#gallery"
+                    class="px-10 py-4 bg-white text-[#8b0000] font-bold rounded-full hover:bg-[#8b0000] hover:text-white transition transform hover:scale-105 shadow-xl">Explore
+                    Gallery</a>
+                <a href="#story"
+                    class="px-10 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-black transition">Meet
+                    the Growers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Story / Owner Section -->
+    <section id="story" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="relative">
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="2.jpg" class="w-full h-full object-cover" alt="Navin Patel - Head Grower">
+                </div>
+                <div class="absolute -bottom-10 -right-10 hidden md:block w-64 p-6 glass rounded-xl shadow-xl">
+                    <p class="serif italic text-lg">"We treat every tree like a family member. That's why the fruit is
+                        so sweet."</p>
+                    <p class="mt-4 font-bold text-xs uppercase tracking-tighter">— Navin Patel, Owner</p>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h2 class="text-sm font-bold text-[#8b0000] uppercase tracking-widest">Our Roots</h2>
+                <h3 class="text-5xl serif leading-tight">Driven by Soil, <br />Led by Family.</h3>
+                <p class="text-stone-600 text-lg leading-relaxed">
+                    Prakriti Farm isn't just a farm; it is a 3-acre legacy. Founded by Mr. Navin Patel, the farm is
+                    now managed by his family members. The farm specializes in the <strong>Bright Red</strong>
+                    variety of pomegranate known for its deep ruby arils and exceptional juice content.
+                </p>
+                <div class="grid grid-cols-2 gap-8 py-6">
+                    <div>
+                        <h4 class="text-3xl font-bold text-[#8b0000]">100%</h4>
+                        <p class="text-sm text-stone-500 uppercase tracking-wide">Natural Farm Product</p>
+                    </div>
+                    <div>
+                        <h4 class="text-3xl font-bold text-[#8b0000]">38yrs</h4>
+                        <p class="text-sm text-stone-500 uppercase tracking-wide">Farming Heritage</p>
+                    </div>
+                </div>
+                <button onclick="document.getElementById('visit').scrollIntoView()"
+                    class="inline-flex items-center space-x-2 text-[#8b0000] font-bold group">
+                    <span>Learn about our process</span>
+                    <span class="group-hover:translate-x-2 transition-transform">→</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Gallery Section -->
+    <section id="gallery" class="py-24 bg-stone-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl serif mb-4">The Gallery</h2>
+                <p class="text-stone-500 max-w-xl mx-auto">A visual journey through the Prakriti Farm. From
+                    the first spring bloom to the heavy autumn harvest.</p>
+
+                <div class="flex justify-center mt-10 space-x-4">
+                    <button onclick="app.filterGallery('all', event)"
+                        class="filter-btn active px-6 py-2 rounded-full bg-[#8b0000] text-white shadow-sm hover:shadow-md transition text-sm font-bold">All</button>
+                    <button onclick="app.filterGallery('fruit', event)"
+                        class="filter-btn px-6 py-2 rounded-full bg-white shadow-sm hover:shadow-md transition text-sm font-bold">The
+                        Fruit</button>
+                    <button onclick="app.filterGallery('orchard', event)"
+                        class="filter-btn px-6 py-2 rounded-full bg-white shadow-sm hover:shadow-md transition text-sm font-bold">The
+                        Land</button>
+                    <button onclick="app.filterGallery('life', event)"
+                        class="filter-btn px-6 py-2 rounded-full bg-white shadow-sm hover:shadow-md transition text-sm font-bold">Farm
+                        Life</button>
+                </div>
+            </div>
+
+            <div id="galleryContainer" class="gallery-grid">
+                <!-- Gallery items will be injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Harvest Data Section -->
+    <section id="harvest" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+                <div class="lg:col-span-1 space-y-6">
+                    <h2 class="text-sm font-bold text-[#8b0000] uppercase tracking-widest">Harvest Analytics</h2>
+                    <h3 class="text-4xl serif">Measuring <br />Excellence</h3>
+                    <p class="text-stone-600">We track every metric to ensure our pomegranates meet the highest
+                        standards of taste and nutrition.</p>
+
+                    <div class="p-6 bg-stone-50 rounded-xl border border-stone-200">
+                        <p class="text-xs font-bold uppercase text-stone-400 mb-2">Next Harvest Countdown</p>
+                        <div class="text-3xl font-mono text-[#8b0000]">February 15, 2027</div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-6 bg-white rounded-xl border border-stone-100 shadow-sm">
+                        <h4 class="font-bold text-sm mb-6 uppercase tracking-wider">Annual Yield (Tons)</h4>
+                        <div class="chart-container">
+                            <canvas id="yieldChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl border border-stone-100 shadow-sm">
+                        <h4 class="font-bold text-sm mb-6 uppercase tracking-wider">Fruit Size (In Grams)</h4>
+                        <div class="chart-container">
+                            <canvas id="brixChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Life at Farm / Seasons -->
+    <section class="py-24 bg-[#432818] text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="max-w-xl">
+                    <h2 class="text-5xl serif">A Year in the Farm</h2>
+                    <p class="text-stone-400 mt-4">Nature has its own rhythm. Follow the life cycle of our orchards
+                        through the four seasons.</p>
+                </div>
+                <div id="seasonNav" class="flex flex-wrap gap-4">
+                    <button onclick="app.setSeason('monsoon', event)"
+                        class="season-btn w-24 h-12 rounded-full border border-stone-600 hover:border-white transition flex items-center justify-center">Monsoon</button>
+                    <button onclick="app.setSeason('spring', event)"
+                        class="season-btn w-24 h-12 rounded-full border border-stone-600 hover:border-white transition flex items-center justify-center">Spring</button>
+                    <button onclick="app.setSeason('winter', event)"
+                        class="season-btn w-24 h-12 rounded-full border border-stone-600 hover:border-white bg-white text-black transition flex items-center justify-center">Winter</button>
+                    <button onclick="app.setSeason('summer', event)"
+                        class="season-btn w-24 h-12 rounded-full border border-stone-600 hover:border-white transition flex items-center justify-center">Summer</button>
+                </div>
+            </div>
+
+            <div id="seasonDisplay" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[400px]">
+                <!-- Content Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Visit Section -->
+    <section id="visit" class="py-24 px-6 bg-stone-50">
+        <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+            <div class="md:w-1/2 p-12 bg-[#8b0000] text-white">
+                <h3 class="text-4xl serif mb-6">Join us for the Harvest</h3>
+                <p class="text-stone-200 mb-8 font-light">Experience the magic of picking your own fruit. Our farm gate
+                    is open during the early summer weeks.</p>
+                <div class="space-y-4 text-sm">
+                    <p>📍 Prakriti Farm, Mandvi, Kutch, Gujarat</p>
+                    <p>📞 +91 9558751394</p>
+                    <p>🕒 Mon-Fri, 10am - 4pm (Seasonal)</p>
+                </div>
+            </div>
+            <div class="md:w-1/2 p-12">
+                <form class="space-y-4" onsubmit="event.preventDefault(); alert('Reservation Requested!');">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-stone-400 mb-1">Full Name</label>
+                        <input type="text"
+                            class="w-full border-b border-stone-200 py-2 outline-none focus:border-[#8b0000] transition"
+                            placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-stone-400 mb-1">Guests</label>
+                        <input type="number"
+                            class="w-full border-b border-stone-200 py-2 outline-none focus:border-[#8b0000] transition"
+                            value="2">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-stone-400 mb-1">Message</label>
+                        <textarea
+                            class="w-full border-b border-stone-200 py-2 outline-none focus:border-[#8b0000] transition h-20"
+                            placeholder="Any special requests?"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full py-4 bg-[#8b0000] text-white font-bold rounded-lg shadow-lg hover:bg-black transition mt-6">Request
+                        A Visit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-stone-900 text-stone-500 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <h4 class="serif text-white text-2xl mb-4">Prakriti Farm</h4>
+            <p class="text-sm max-w-md mx-auto mb-8">Using traditional and eco-friendly farming practices, to grow tasty, healthy and nutrition rich pomegranates.</p>
+            <div class="flex justify-center space-x-8 mb-8 text-white text-sm">
+                <a href="index.html" class="hover:text-[#d00000]">Home</a>
+                <a href="#story" class="hover:text-[#d00000]">The Story</a>
+                <a href="#gallery" class="hover:text-[#d00000]">Gallery</a>
+                <a href="#harvest" class="hover:text-[#d00000]">Harvest</a>
+                <a href="#visit" class="hover:text-[#d00000]">Book A Visit</a>
+            </div>
+            <p class="text-xs">© 2026 NP Prakriti Farm. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
